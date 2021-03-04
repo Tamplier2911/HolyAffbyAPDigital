@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desc" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Barilla</title>
+</head>
+<body>
+    <div id="root">
+        <header></header>
+        <main>
+            <section class="main">
+                <div class="main__header">
+                    <h1 class="title-primary">
+                        Vinci una fornitura
+                        <br>
+                        di pasta Barilla gratis per un anno!
+                    </h1>
+                </div>
+                <div class="main__img">
+                    <div class="main__img--wrapper"></div>
+                </div>
+                <div class="main__title">
+                    <h2 class="title-secondary">Dove possiamo inviare il possibile premio?</h2>
+                </div>
+                <div class="main__form">
+                    <form id="main-form" class="main-form" autocomplete="off">
+                        <div class="main-form-row">
+                            <div class="main-form-input-holder">
+                                <input class="radio-input" type="radio" name="genere" id="uomo" value="uomo" checked/>
+                                <label class="radio-label" for="uomo">UOMO</label>
+                            </div>
+                            <div class="main-form-input-holder">
+                                <input class="radio-input" type="radio" name="genere" id="donna" value="donna"/>
+                                <label class="radio-label" for="donna">DONNA</label>
+                            </div>
+                        </div>
+                        <div class="main-form-row">
+                            <div class="main-form-input-holder">
+                                <input class="text-input" type="text" name="name" id="name" placeholder="name"/>
+                                <label class="text-label" for="name">Name</label>
+                                <span class="text-error" id="error-name">completa correttamente il campo: nome</span>
+                            </div>
+                            <div class="main-form-input-holder">
+                                <input class="text-input" type="text" name="cognome" id="cognome" placeholder="cognome"/>
+                                <label class="text-label" for="cognome">Cognome</label>
+                                <span class="text-error" id="error-cognome">completa correttamente il campo: cognome</span> 
+                            </div>
+                        </div>
+                        <div class="main-form-row">
+                            <div class="main-form-input-holder">
+                                <input class="text-input" type="email" name="email" id="email" placeholder="email"/>
+                                <label class="text-label" for="email">Email</label>
+                                <span class="text-error" id="error-email">completa correttamente il campo: email</span>
+                            </div>
+                        </div>
+                        <div class="main-form-row">
+                            <!-- <div class="main-form-input-holder">
+                                <input class="text-input" type="number" name="cap" id="cap" ma/>
+                                <label class="text-label" for="cap">CAP</label>
+                                <span class="text-error">controlla il campo: codice postale</span>
+                            </div>
+                            <div class="main-form-input-holder">
+                                <select class="text-input" name="city" id="city">
+                                    <option selected>Località</option>
+                                </select>
+                            </div> -->
+                        </div>
+                        <div class="main-form-row">
+                            <p class="font-medium">Data di nascita</p>
+                            <div>
+                                <div>
+                                    <input class="text-input" type="number" name="giorno" id="giorno" placeholder="giorno"/>
+                                    <label class="text-label" for="giorno">Giorno</label>
+                                </div>
+                                <div>
+                                    <input class="text-input" type="number" name="mese" id="mese" placeholder="mese"/>
+                                    <label class="text-label" for="mese">Mese</label>
+                                </div>
+                                <div>
+                                    <input class="text-input" type="number" name="anno" id="anno" placeholder="anno"/>
+                                    <label class="text-label" for="anno">Anno</label>
+                                </div>
+                            </div>
+                            <span class="text-error" id="error-age">I minori di 18 anni non possono participare!</span>
+                        </div>
+                        <!-- <div class="main-form-row">
+                            <div class="main-form-input-holder">
+                                <p class="font-medium">Ho preso visione del <a class="link" href="#" referrerpolicy="no-referrer unsafe-url">regolamento</a> e dell'<a class="link" href="#" referrerpolicy="no-referrer unsafe-url">informativa privacy</a>.</p>
+                            </div>
+                        </div>
+                        <div class="main-form-row">
+                            <div class="main-form-input-holder">
+                                <div>
+                                    <input class="checkbox-input" type="checkbox" name="directmarket" id="directmarket"/>
+                                    <label class="checkbox-label" for="directmarket">Acconsento al trattamento dei miei dati personali per finalità di marketing diretto.</label>
+                                </div>
+                            </div>
+                            <div class="main-form-input-holder">
+                                <div>
+                                    <input class="checkbox-input"  type="checkbox" name="thirdparties" id="thirdparties"/>
+                                    <label class="checkbox-label" for="thirdparties">Acconsento al trattamento dei miei dati per la comunicazione a terzi con finalità di marketing diretto.</label>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="main-form-row">
+                            <div class="main-form-input-holder">
+                                <button class="submit-input" id="submit" type="submit">PARTECIPAZIONE 100% GRATUITA</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="summary">
+                <div class="summary__cp">
+                    <p>
+                        Giorno Unico 2021 - Partecipazione gratuita.
+                        <br>
+                        CONCORSO A PREMI con periodo di partecipazione dal 27 novembre 2020 al 14 novembre 2021. 
+                        <br>
+                        <br>
+                        REALIZZATO IN CONFORMITÀ CON QUANTO PREVISTO DAL DPR 430/2001 - L'estrazione è garantita da Naturvel PTE LTD. Solo gli utenti che compilano interamente e correttamente il modulo partecipano all'estrazione. Premio: un buono Idea Shopping del valore di 1000 euro iva esclusa - montepremi complessivo del concorso è pari a 1000 Euro iva esclusa. In alternativa al buono IdeaShopping, l’utente vincitore può scegliere di ricevere un voucher di una compagnia aerea o ferroviaria selezionata dal Promotore.
+                    </p>
+                    <div class="summary__links">
+                        <ul class="ul">
+                            <li class="li">
+                                <a class="link" href="#" id="advertise" referrerpolicy="no-referrer unsafe-url">Advertise</a>
+                            </li>
+                            |
+                            <li class="li">
+                                <a class="link" href="#" id="regolamento" referrerpolicy="no-referrer unsafe-url">Regolamento</a>
+                            </li>
+                            |
+                            <li class="li">
+                                <a class="link" href="#" id="privacy" referrerpolicy="no-referrer unsafe-url">Privacy</a>
+                            </li>
+                            |
+                            <li class="li">
+                                <a class="link" href="#" id="contatto" referrerpolicy="no-referrer unsafe-url">Contatto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal__window" id="advertise-modal">
+            <div>
+                <h3>Promote our Offers!</h3>
+            </div>
+            <div>
+                <p><b>Register here</b> at your private affiliate Network, Big Bang Adds.</p>
+            </div>
+            <div class="advertise-img">
+                
+            </div>
+            <div>
+                <button class="submit-input" id="advertise-closer">CHIUDI FINESTRA</button>
+            </div>
+        </div>
+        <div class="modal__window" id="regolamento-modal">
+            <div>
+                <h2>REGOLAMENTO DEL CONCORSO A PREMI</h2>
+            </div>
+            <div>
+                <p>"Giorno unico 2021"</p>
+            </div>
+            <div>
+                <h3>1. SOGGETTO PROMOTORE</h3>
+            </div>
+            <div>
+                <p>Naturvel PTE. LTD., con sede legale in Singapore, Via Raffles Place n.9,26-01, Republic Plaza, 048619, registrata presso il Registro delle Imprese di Singapore (ACRA) al numero 201431968D (di seguito, il "<b>Soggetto Promotore</b>").</p>
+            </div>
+            <div>
+                <h3>2. RAPPRESENTANTE FISCALE IN ITALIA</h3>
+            </div>
+            <div>
+                <p>Alfaplanner s.r.l, con sede legale in Grosseto, Via Veio n.22, C.F/Partita IVA/iscrizione nel Registro delle Imprese di Grosseto n. 01648510533, capitale sociale Euro 10.000,00 i.v., R.E.A n. 127909 (di seguito, il "<b>Rappresentante Fiscale</b>").</p>
+            </div>
+            <div>
+                <h3>3. SOGGETTO DELEGATO (ex art. 5, co. 3 del D.P.R. 430/2001)</h3>
+            </div>
+            <div>
+                <p>Alfaplanner S.r.l., www.alfaplanner.com con sede legale in Grosseto, Via Veio n.22, Codice Fiscale/Partita IVA/iscrizione nel Registro delle Imprese di Grosseto n. 01480420536, capitale sociale Euro 10.000,00 i.v., -R.E.A. n.127909 (di seguito, il "<b>Soggetto Delegato</b>").</p>
+            </div>
+            <div>
+                <h3>4. DENOMINAZIONE DEL CONCORSO</h3>
+            </div>
+            <div>
+                <p>“Giorno unico 2021” (di seguito, il "Concorso")</p>
+            </div>
+            <div>
+                <h3>5. PERIODO DI PARTECIPAZIONE</h3>
+            </div>
+            <div>
+                <p>La partecipazione al Concorso è consentita dal giorno <b>27 novembre 2020</b> al giorno <b>14 novembre 2021</b> (di seguito, il "<b>Periodo di Partecipazione</b>"). Estrazione entro il giorno 27 novembre 2021.</p>
+            </div>
+            <div>
+                <h3>6. OGGETTO DELLA PROMOZIONE</h3>
+            </div>
+            <div>
+                <p>La ditta promotrice, il suo marchio e i suoi servizi nel territorio dello Stato.</p>
+            </div>
+            <div>
+                <h3>7. AMBITO TERRITORIALE</h3>
+            </div>
+            <div>
+                <p>Il territorio della Repubblica Italiana e della Repubblica di San Marino.</p>
+            </div>
+            <div>
+                <h3>8. DESTINATARI</h3>
+            </div>
+            <div>
+                <p>Tutte le persone fisiche maggiorenni residenti sul territorio della Repubblica Italiana o della Repubblica di San Marino (di seguito I "<b>Destinatari</b>"). Sono esclusi i dipendenti ed i rispettivi coniugi e parenti del Soggetto Promotore e del Soggetto Delegato.</p>
+            </div>
+            <div>
+                <h3>9. MODALITA' DI PARTECIPAZIONE E PREMI IN PALIO</h3>
+            </div>
+            <div>
+                <p>Per partecipare all’estrazione finale gli utenti, durante il periodo di partecipazione, dovranno collegarsi ad almeno uno dei seguenti siti internet di proprietà del Soggetto Promotore:</p>
+            </div>
+            <div>
+                <p><a class="link" href="www.giornounico.com" referrerpolicy="no-referrer unsafe-url">www.giornounico.com</a></p>
+                <p><a class="link" href="www.ilsuperpremio.com" referrerpolicy="no-referrer unsafe-url">www.ilsuperpremio.com</a></p>
+                <p><a class="link" href="www.tuoregalo.com" referrerpolicy="no-referrer unsafe-url">www.tuoregalo.com</a></p>
+                <p><a class="link" href="www.pioggiadipremi.com" referrerpolicy="no-referrer unsafe-url">www.pioggiadipremi.com</a></p>
+                <p><a class="link" href="www.giornodigloria.com" referrerpolicy="no-referrer unsafe-url">www.giornodigloria.com</a></p>
+                <p><a class="link" href="www.oggiseitu.com" referrerpolicy="no-referrer unsafe-url">www.oggiseitu.com</a></p>
+                <p><a class="link" href="www.ritiroimmediato.com" referrerpolicy="no-referrer unsafe-url">www.ritiroimmediato.com</a></p>
+                <p><a class="link" href="www.unbelgiorno.com" referrerpolicy="no-referrer unsafe-url">www.unbelgiorno.com</a></p>
+                <p><a class="link" href="www.fortunato-oggi.com" referrerpolicy="no-referrer unsafe-url">www.fortunato-oggi.com</a></p>
+                <p><a class="link" href="www.fortunatooggi.com" referrerpolicy="no-referrer unsafe-url">www.fortunatooggi.com</a></p>
+                <p><a class="link" href="www.il-tuo-giorno.com" referrerpolicy="no-referrer unsafe-url">www.il-tuo-giorno.com</a></p>
+                <p><a class="link" href="www.iltuogiorno.com" referrerpolicy="no-referrer unsafe-url">www.iltuogiorno.com</a></p>
+                <p><a class="link" href="www.giorno-fortunato.com" referrerpolicy="no-referrer unsafe-url">www.giorno-fortunato.com</a></p>
+                <p><a class="link" href="www.meglio-per-te.com" referrerpolicy="no-referrer unsafe-url">www.meglio-per-te.com</a></p>
+                <p><a class="link" href="www.tutto-per-te.com" referrerpolicy="no-referrer unsafe-url">www.tutto-per-te.com</a></p>
+                <p><a class="link" href="www.tuttoperme.com" referrerpolicy="no-referrer unsafe-url">www.tuttoperme.com</a></p>
+                <p><a class="link" href="www.tutto-per-me.com" referrerpolicy="no-referrer unsafe-url">www.tutto-per-me.com</a></p>
+                <p><a class="link" href="www.ora-tu.com" referrerpolicy="no-referrer unsafe-url">www.ora-tu.com</a></p>
+                <p><a class="link" href="www.eccoti-qua.com" referrerpolicy="no-referrer unsafe-url">www.eccoti-qua.com</a></p>
+                <p><a class="link" href="www.eccotiqua.com" referrerpolicy="no-referrer unsafe-url">www.eccotiqua.com</a></p>
+                <p><a class="link" href="www.latuapagina.com" referrerpolicy="no-referrer unsafe-url">www.latuapagina.com</a></p>
+                <p><a class="link" href="www.la-tua-pagina.com" referrerpolicy="no-referrer unsafe-url">www.la-tua-pagina.com</a></p>
+                <p><a class="link" href="www.qui-e-ora.com" referrerpolicy="no-referrer unsafe-url">www.qui-e-ora.com</a></p>
+                <p><a class="link" href="www.partecipa-ora.com" referrerpolicy="no-referrer unsafe-url">www.partecipa-ora.com</a></p>
+                <p><a class="link" href="www.partecipaora.com" referrerpolicy="no-referrer unsafe-url">www.partecipaora.com</a></p>
+            </div>
+            <div>
+                <p>(di seguito “<b>il Sito</b>”), e compilare il modulo di iscrizione in tutti i suoi campi, indicando nome, cognome, indirizzo, numero di telefono ed email.</p>
+            </div>
+            <div>
+                <p>I Destinatari potranno facoltativamente rispondere a domande di tipo statistico. La scelta di rispondere alle domande non precluderà in alcun modo la partecipazione all’estrazione finale.</p>
+            </div>
+            <div>
+                <p>Una volta terminato l’inserimento di tutti i dati, l’utente riceverà, all’indirizzo di posta elettronica indicato in fase di partecipazione, una email per confermare la registrazione. Una volta confermata la registrazione e seguendo le istruzioni contenute nell’email ricevuta, l’utente avrà diritto a partecipare all’estrazione finale. Il mancato inserimento di uno dei dati obbligatori richiesti nel form di registrazione impedirà la partecipazione al concorso. I dati anagrafici incomprensibili, incompleti o palesemente non veritieri saranno considerati non validi: pertanto, il partecipante perderà il diritto alla partecipazione. E’ consentita una sola partecipazione per ogni indirizzo email. Ogni utente può partecipare mediante un solo indirizzo email.</p>
+            </div>
+            <div>
+                <p>Accedendo all’estrazione finale, la quale avverrà alla presenza di un funzionario della Camera di Commercio o di un Notaio tutore della Fede ubblica, il nominativo estratto potrà vincere un solo esemplare del premio di seguito descritto, a scelta tra:</p>
+            </div>
+            <div>
+                <p><b>Opzione A)</b> n. 1 (uno) buono Idea Shopping del valore totale di Euro 1.000,00 (mille//00) iva inclusa convertibile in buoni spendibili in circa 40 esercizi commerciali. Le condizioni di utilizzo del buono “IdeaShopping” sono visibili al sito https://blue.idea-shopping.it e il catalogo completo degli esercizi commerciali presso i quali è possibile convertire il buono è consultabile all’indirizzo https://blue.idea-shopping.it/welcome</p>
+            </div>
+            <div>
+                <p><b>Opzione B)</b> n. 1 (uno) buono sconto spendibile presso una compagnia aerea selezionata dal Promotore del valore totale di Euro 1.000,00 (mille//00) iva inclusa. Il buono sconto spendibile presso una compagnia aerea selezionata dal Promotore è soggetto alle condizioni della società emittente del buono. Non sono incluse le spese di trasferimento da e per l’aeroporto e qualsiasi altra spesa accessoria e/o eccedente il valore o la natura del buono sconto stesso.</p>
+            </div>
+            <div>
+                <p><b>Opzione C)</b> n. 1 (uno) buono sconto spendibile presso una compagnia ferroviaria selezionata dal Promotore del valore totale di Euro 1.000,00 (mille//00) iva inclusa. Il buono sconto spendibile presso una società ferroviaria selezionata dal Promotore è soggetto alle condizioni della società emittente del buono. Non sono incluse le spese di trasferimento da e per la stazione ferroviaria e qualsiasi altra spesa accessoria e/o eccedente il valore o la natura del buono sconto stesso.</p>
+            </div>
+            <div>
+                <p><b>Opzione D)</b> n. 100 (cento) buoni pasto TicketRestaurant del valore di euro 10,00 (dieci//00) iva inclusa ciascuno, per un valore complessivo di euro 1.000,00 (mille//00) iva inclusa. Le condizioni di utilizzo dei buoni sono visibili sul sito https://www.edenred.it/buoni-pasto-welfare-benefit/ticket-restaurant/</p>
+            </div>
+            <div>
+                <p>Alla presenza di un notaio o di un funzionario preposto alla tutela della fede Pubblica, verrà estratto dal database nel quale sono stati registrati i dati pervenuti attraverso il sito internet, mediante software, il nominativo di 1 (uno) vincitore. Saranno inoltre estratti 10 (dieci) nominativi di riserva, ai quali verrà aggiudicato il premio, nell’ordine di graduatoria, nel caso in cui il precedente estratto non sia in regola con le norme del Regolamento o non accetti il premio. Il vincitore sarà contattato per scegliere 1 (uno) solo esemplare a scelta tra il premio A (Opzione A), il premio B (Opzione B), oppure il premio C (Opzione C) oppure il premio D (Opzione D).</p>
+            </div>
+            <div>
+                <p>Il premio è personale e non cedibile. Il Soggetto Promotore si riserva la facoltà di confermare le vincite dopo aver confrontato i dati inviati per la convalida della vincita con quelli inseriti all’atto di partecipazione e di effettuare tutti i controlli che riterrà necessari per verificare il rispetto delle condizioni di partecipazione.</p>
+            </div>
+            <div>
+                <h3>10. MONTEPREMI</h3>
+            </div>
+            <div>
+                <p>Il montepremi complessivo del Concorso è pari ad Euro 1.000,00 (mille) iva inclusa.</p>
+            </div>
+            <div>
+                <h3>11. CAUZIONE</h3>
+            </div>
+            <div>
+                <p>La cauzione viene versata in favore del Ministero dello Sviluppo Economico, per un importo pari al 100% del valore complessivo del montepremi del Concorso, al netto di Iva, ai sensi dell’art. 7, comma 1. lettera a) D.P.R. n. 430/2001.</p>
+            </div>
+            <div>
+                <h3>12. NOTIFICHE DELLE VINCITE E CONSEGNA DEI PREMI</h3>
+            </div>
+            <div>
+                <p><b>12.1</b> Entro 10 (dieci) giorni dall’estrazione l’utente verrà informato della vincita tramite email all’indirizzo rilasciato in fase di registrazione al Concorso.</p>
+            </div>
+            <div>
+                <p><b>12.2</b> All’utente estratto, per convalidare la vincita, verrà richiesto di confermare via email entro e non oltre 10 (dieci) giorni i propri dati personali (nome, cognome, indirizzo, telefono cellulare) e di inviare copia della carta di identità in corso di validità e codice fiscale.</p>
+            </div>
+            <div>
+                <p><b>12.3</b> Si precisa che la convalida della vincita potrà essere confermata solo dopo la ricezione dei documenti richiesti, che dovranno pervenire comunque entro e non oltre 10 (dieci) giorni dalla data di comunicazione della vincita. In caso di mancata risposta entro il suddetto termine, il premio si intenderà come non richiesto.</p>
+            </div>
+            <div>
+                <p><b>12.4</b> In caso di mancata spedizione dei documenti richiesti entro i termini previsti oppure di documenti che riporteranno dati incomprensibili, dati differenti dai dati digitati durante la partecipazione al concorso, incompleti o palesemente non veritieri, essi saranno considerati non validi e il vincitore perderà il diritto all'ottenimento del premio e, con le stesse modalità di comunicazione di vincita, si passerà quindi ad avvisare la prima riserva disponibile, che avrà anch’essa tempo 10 (dieci) giorni per spedire tutta la documentazione richiesta al fine di convalidare la vincita.</p>
+            </div>
+            <div>
+                <p><b>12.5</b> Il premio sarà consegnato entro 180 giorni (6 mesi) dalla data di assegnazione, come previsto dall’art. 1, comma 3, D.P.R. 430/2001, secondo le modalità che verranno indicate al momento della comunicazione della vincita.</p>
+            </div>
+            <div>
+                <p><b>12.6</b> Ai sensi dell’art. 9, comma 1, D.P.R. n. 430/2001, l’assegnazione dei premi sarà effettuata alla presenza di un notaio o del responsabile della tutela del consumatore e della fede pubblica competente per territorio o di un suo delegato. Ai sensi del medesimo articolo, se il congegno utilizzato per l’assegnazione dei premi richiede particolari conoscenze tecniche, il notaio o il pubblico ufficiale è affiancato da un esperto che rende apposita perizia.</p>
+            </div>
+            <div>
+                <p><b>12.7</b> In caso di premio non assegnato o non richiesto o rifiutato, il premio in questione sarà assegnato alla prima riserva. Qualora il premio risulti nuovamente non assegnato o non richiesto o rifiutato, esso verrà assegnato alla successiva riserva. In caso di esaurimento di tutte le riserve, i premi non richiesti o non assegnati, diversi da quelli rifiutati, saranno devoluti alla ONLUS di cui al successivo punto.</p>
+            </div>
+            <div>
+                <h3>13. ONLUS</h3>
+            </div>
+            <div>
+                <p>Ai sensi dell'art.10, comma 5, D.P.R. 430/2001, i premi non richiesti o non assegnati, diversi da quelli rifiutati, saranno devoluti a Officina Famiglia ONLUS, con sede in Grosseto, via lago di Como n.20, codice fiscale 92081020536.</p>
+            </div>
+            <div>
+                <h3>14. TERMINI E CONDIZIONI GENERALI</h3>
+            </div>
+            <div>
+                <p><b>14.1</b> La partecipazione al Concorso è completamente gratuita, fatti salvi i costi telefonici e di connessione alla rete Internet, che sono a carico del Partecipante secondo le tariffe di volta in volta applicate dal proprio operatore.</p>
+            </div>
+            <div>
+                <p><b>14.2</b> La partecipazione al Concorso implica l'accettazione da parte del Partecipante del presente regolamento, che è interamente soggetto alla legge della Repubblica Italiana.</p>
+            </div>
+            <div>
+                <p><b>14.3</b> I premi non potranno essere convertiti in denaro in nessun caso. I Partecipanti non potranno richiedere, con o senza conguagli in denaro, la consegna di premi diversi e/o a condizioni diverse da quelle previste dal presente regolamento.</p>
+            </div>
+            <div>
+                <p><b>14.4</b> Il Soggetto Promotore si riserva il diritto di sostituire i premi con articoli di pari valore e qualità, nel caso in cui i premi previsti nel presente regolamento non siano più disponibili sul mercato per cause non imputabili al Soggetto Promotore.</p>
+            </div>
+            <div>
+                <p><b>14.5</b> L'utilizzo e la fruizione di premi potrebbero essere soggetti a termini e condizioni previsti dai terzi produttori e/o distributori e/o erogatori dei premi previsti dal presente regolamento.</p>
+            </div>
+            <div>
+                <p><b>14.6</b> Nella massima misura consentita dalla legge applicabile, il Soggetto Promotore non si assume alcuna responsabilità in relazione all'utilizzo e/o alla fruizione dei premi da parte dei Partecipanti vincitori.</p>
+            </div>
+            <div>
+                <p><b>14.7</b> I Partecipanti che, secondo il giudizio del Soggetto Promotore, risultino vincitori con mezzi e strumenti in grado di eludere l'aleatorietà, o comunque giudicati in maniera sospetta, fraudolenta, o in violazione del normale svolgimento dell’iniziativa, non potranno godere del premio vinto in tale modo. Il Soggetto Promotore si riserva il diritto di procedere, nei termini giudicati più opportuni e nel rispetto delle leggi vigenti, al fine di limitare ed inibire ogni iniziativa volta ad aggirare il sistema ideato, nonché si riserva di tutelare i propri diritti nelle sedi opportune.</p>
+            </div>
+            <div>
+                <p><b>14.8</b> Il Soggetto Promotore si riserva la facoltà di confermare le vincite dopo aver verificato la reale identità dei Partecipanti, ad esempio richiedendo copia del documento di identità dei Partecipanti, e di effettuare i controlli che riterrà necessari per verificare il rispetto delle previsioni del presente regolamento.</p>
+            </div>
+            <div>
+                <p><b>14.9</b> Nella massima misura consentita dalla legge, il Soggetto Promotore non si assume alcuna responsabilità in caso di mancato recapito dell’avviso di vincita o dei premi dovuto all’indicazione di indirizzi (elettronici o di residenza) o dati personali errati e/o non veritieri da parte dei vincitori e/o a disguidi postali.</p>
+            </div>
+            <div>
+                <p><b>14.10</b> Il Soggetto Promotore dichiara che il server di raccolta e gestione di tutti i dati relativi al Concorso si trova in Germania e che il database è sincronizzato in tempo reale con un database mirror in Italia presso Aruba s.p.a., Loc. Palazzetto 4, Bibbiena Stazione- Arezzo.</p>
+            </div>
+            <div>
+                <p><b>14.11</b> La raccolta dei dati dei partecipanti avverrà in ottemperanza al D. Lgs. n. 196/03, nonché al Regolamento UE 679/2016, come di volta in volta modificati. L’informativa privacy del Soggetto Promotore (titolare del trattamento) sarà resa a ciascun Partecipante in fase di registrazione sul Sito. Il Soggetto Delegato agirà in qualità di responsabile esterno del trattamento del Soggetto Promotore, e tratterà i dati personali dei Partecipanti al fine esclusivo di organizzare il Concorso e consentire ai Partecipanti di partecipare allo stesso.</p>
+            </div>
+            <div>
+                <p><b>14.12</b> Il presente regolamento è pubblicato sul Sito. Il Soggetto Promotore si riserva il diritto di modificare in tutto o in parte il presente regolamento, notificando le modifiche in questione al Ministero dello Sviluppo Economico, dandone adeguata comunicazione al pubblico, fermo restando che non siano apportate modifiche peggiorative o lesive di diritti già acquisiti da parte dei Partecipanti.</p>
+            </div>
+            <div>
+                <h3>15. RINUNCIA ALLA RIVALSA</h3>
+            </div>
+            <div>
+                <p>Il Soggetto Promotore dichiara di rinunciare ad esercitare la facoltà di rivalsa della ritenuta alla fonte ex art. 30 D.P.R. 600/1973 a favore dei vincitori.</p>
+            </div>
+            <div>
+                <h3>16. TRATTAMENTO DATI PERSONALI</h3>
+            </div>
+            <div>
+                <p><em><u>Titolare del trattamento</u></em></p>
+                <p>Titolare del trattamento è il Soggetto Promotore come sopra generalizzato.</p>
+            </div>
+            <div>
+                <p><em><u>Base giuridica e finalità del trattamento</u></em></p>
+                <p>Il Soggetto Promotore (di seguito, il “Titolare”) in qualità di Titolare del trattamento, informa che i dati personali volontariamente forniti dai partecipanti in relazione al presente Concorso sono trattati esclusivamente per le finalità di gestione strettamente funzionali alla partecipazione al Concorso stesso.</p>
+            </div>
+            <div>
+                <p><em><u>Conferimento dei dati</u></em></p>
+                <p>Il conferimento dei dati personali dei partecipanti in relazione al presente Concorso è facoltativo ma, essendo presupposto indispensabile per la partecipazione, il loro mancato, parziale o inesatto conferimento comporterà l’impossibilità di parteciparvi.</p>
+            </div>
+            <div>
+                <p><em><u>Modalità del trattamento e periodo di conservazione dei dati</u></em></p>
+                <p>I predetti dati personali sono trattati attraverso strumenti automatizzati (ad es. utilizzando procedure e supporti elettronici) e/o manualmente (ad es. su supporto cartaceo) anche con l’ausilio di strumenti informatici, per il tempo necessario a conseguire gli scopi per i quali i dati medesimi sono stati raccolti ed in modo da garantirne la sicurezza e la riservatezza in conformità alle disposizioni normative vigenti in materia di trattamento dei dati personali.</p>
+            </div>
+            <div>
+                <p><em><u>Destinatari</u></em></p>
+                <p>I suddetti dati personali potranno essere comunicati, esclusivamente per le finalità sopra illustrate, a terzi fornitori di servizi, che operano in qualità di autonomi Titolari del trattamento o di Responsabili del trattamento, e potranno essere trattati da soggetti preposti alla gestione della manifestazione a premi, in qualità di Persone Autorizzate al trattamento. L’elenco aggiornato dei Responsabili potrà sempre essere richiesto al Titolare del Trattamento, rivolgendosi all’indirizzo di seguito indicato.</p>
+            </div>
+            <div>
+                <p><em><u>Trasferimento verso un Paese Terzo</u></em></p>
+                <p>Il Titolare del Trattamento si serve, per le finalità sopra indicate, di server situati all’interno dell’Unione Europea; pertanto sulla base del Reg. UE 2016/679 è da ritenersi idoneo. I dati trattati dal Titolare non saranno mai diffusi.</p>
+            </div>
+            <div>
+                <p><em><u>Diritti dell’interessato</u></em></p>
+                <p>Ai sensi degli artt. 13 e ss. del Regolamento UE 2016/679 (“GDPR”), in relazione ai Dati Personali trattati l’interessato ha il diritto di ottenere in qualunque momento dal Titolare:</p>
+            </div>
+            <div>
+                <p>A) Diritto di accesso. L’interessato ha diritto ad ottenere informazioni sui dati trattati dal Titolare, su determinati aspetti del trattamento ed a ricevere una copia dei dati trattati;</p>
+            </div>
+            <div>
+                <p>B) Diritto di rettifica. L’interessato ha diritto di verificare la correttezza dei propri dati e richiedere l’integrazione dei dati incompleti, nonché l’aggiornamento e/o la correzione dei dati inesatti;</p>
+            </div>
+            <div>
+                <p>C) Diritto alla cancellazione. Quando ricorrono le condizioni previste dall’art. 17 del Regolamento UE 2016/679, l’interessato può richiedere la cancellazione dei propri dati da parte del Titolare;</p>
+            </div>
+            <div>
+                <p>D) Diritto alla limitazione del trattamento. Quando ricorre una delle ipotesi indicate dall’articolo 18, comma 1, del Regolamento UE n. 2016/679, l’interessato può richiedere la limitazione del trattamento dei propri dati. In tal caso il Titolare non tratterà i dati per alcun altro scopo se non la loro conservazione;</p>
+            </div>
+            <div>
+                <p>E) Diritto di opposizione. L’interessato ha diritto di opporsi in qualsiasi momento al trattamento dei propri dati quando ricorre una delle condizioni di cui all’art.21 del Regolamento UE n. 2016/679;</p>
+            </div>
+            <div>
+                <p>F) Diritto alla portabilità dei dati. L’interessato ha diritto di ricevere i propri dati in formato strutturato, di uso comune e leggibile da dispositivo automatico e, ove tecnicamente fattibile, di ottenerne il trasferimento senza ostacoli ad un altro titolare. Questa disposizione è applicabile quando i dati sono trattati con strumenti automatizzati ed il trattamento è basato sul consenso dell’interessato, su un contratto di cui l’interessato è parte o su misure contrattuali ad esso connesse;</p>
+            </div>
+            <div>
+                <p>G) Diritto di revoca. L’interessato può revocare in ogni momento il consenso al trattamento dei propri dati personali precedentemente espresso;</p>
+            </div>
+            <div>
+                <p>H) Diritto di proporre reclamo. Gli interessati che ritengono che il trattamento dei dati personali a loro riferito avvenga in violazione di quanto previsto dal Regolamento hanno il diritto di proporre reclamo al Garante, come previsto dall’art. 77 del Regolamento stesso, o di adire le opportune sedi giudiziarie (art. 79 del Regolamento).</p>
+            </div>
+            <div>
+                <p>Per l’esercizio dei diritti sopra elencati e per la revoca del consenso l’interessato potrà inviare una comunicazione scritta al seguente indirizzo email: <a class="link" href="#" referrerpolicy="no-referrer unsafe-url">info@naturvel.com</a></p>
+            </div>
+            <div>
+                <h3>17. COMUNICAZIONI</h3>
+            </div>
+            <div>
+                <p>Per qualsiasi informazione relativa al Concorso o al presente regolamento e per eventuali richieste di cancellazione si prega di contattare il Promotore via email al seguente indirizzo <a class="link" href="#" referrerpolicy="no-referrer unsafe-url">info@naturvel.com</a>.</p>
+                <p>Le ditte produttrici o fornitrici dei premi non sono sponsor del Concorso e non sono coinvolte in alcun modo con esso.</p>
+            </div>
+            <div>
+                <button class="submit-input" id="regolamento-closer">CHIUDI FINESTRA</button>
+            </div>
+        </div>
+        <div class="modal__window" id="contatto-modal">
+            <div>
+                <h3>Contatto:</h3>
+            </div>
+            <div>
+                <p>Questo gioco a premi viene offerto dalla Naturvel PTE LTD</p>
+            </div>
+            <div>
+                <h4>Naturvel PTE LTD</h4>
+                <span>26 Eng Hoon Street</span>
+                <span>Singapore 169776</span>
+                <span>Singapore</span>
+            </div>
+            <div>
+                <p>Per ulteriori informazioni riguardanti la società preghiamo di inviare una email all’indirizzo <b>info(at)naturvel.com</b>.</p>
+            </div>
+            <div>
+                <h4>Proprietà intellettuale</h4>
+                <p>I diritti di tutti i testi, elementi grafici, codici HTML e script sono di proprietà della Naturvel PTE LTD e ne è vietato qualunque uso senza esplicita autorizzazione da parte di Naturvel..</p>
+            </div>
+            <div>
+                <p>La Naturvel PTE LTD è registrata presso il Registro delle Imprese di Singapore (ACRA) con il numero 201431968D e viene rappresentata dall’amministratore Wai Siew Peng.</p>
+            </div>
+            <div>
+                <button class="submit-input" id="contatto-closer">CHIUDI FINESTRA</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
